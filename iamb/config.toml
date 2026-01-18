@@ -1,0 +1,17 @@
+default_profile = "nitrochat"
+
+[profiles.nitrochat]
+user_id = "@ash:nitro.chat"
+
+[settings]
+image_preview = {}
+
+# Keybindings
+
+[macros.normal]
+";" = ":"
+"gc" = ":chats<Enter>"
+
+[macros.insert]
+"<C-Enter>" = "<Esc><Enter>"
+"<Enter>" = "<S-Enter>"

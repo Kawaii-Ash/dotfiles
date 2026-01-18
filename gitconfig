@@ -1,0 +1,16 @@
+[user]
+	name = Ash Ametrine
+	email = ashu9s@proton.me
+	signingkey = 6DDFB40F9A329EF46CCECF67EF86FC12BB84F79E
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[branch]
+	autosetupmerge = true
+[core]
+	excludesfile = ~/.gitignore
+[merge]
+	conflictstyle = diff3
+[commit]
+	gpgsign = true

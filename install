@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo -e "\nCreating symlinks...\n"
+
+mkdir -p ~/.config/niri ~/.config/iamb
+
+ln -is $(pwd)/niri/config.kdl ~/.config/niri/
+ln -is $(pwd)/gitconfig ~/.gitconfig
+ln -is $(pwd)/gitignore ~/.gitignore
+ln -is $(pwd)/iamb/config.toml ~/.config/iamb/
+ln -is $(pwd)/scdaemon.conf ~/.gnupg/

@@ -6,6 +6,9 @@ user_id = "@ash:nitro.chat"
 [settings]
 image_preview = {}
 
+[settings.notifications]
+enabled = true
+
 # Keybindings
 
 [macros.normal]

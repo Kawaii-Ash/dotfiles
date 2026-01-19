@@ -10,15 +10,15 @@
       "locked": {
         "lastModified": 1767561993,
         "narHash": "sha256-DNxAzZcqlHs9OQXHi+kgi6k+ZmJK/BW8R4OmLDeJM3k=",
-        "ref": "refs/heads/master",
+        "owner": "Kawaii-Ash",
+        "repo": "ash-quickshell",
         "rev": "2c719cf78dfd1b47668b7b528efb36064f400dfe",
-        "revCount": 3,
-        "type": "git",
-        "url": "https://codeberg.org/Kawaii-Ash/ash-quickshell"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://codeberg.org/Kawaii-Ash/ash-quickshell"
+        "owner": "Kawaii-Ash",
+        "repo": "ash-quickshell",
+        "type": "github"
       }
     },
     "awww-flake": {

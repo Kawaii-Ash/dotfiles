@@ -24,7 +24,7 @@
 
     # Remote flake packages
     ash-quickshell-flake = {
-      url = "git+https://codeberg.org/Kawaii-Ash/ash-quickshell";
+      url = "github:Kawaii-Ash/ash-quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     awww-flake = {

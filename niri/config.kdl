@@ -1,5 +1,4 @@
 workspace "Main"
-workspace "Web"
 workspace "Chat"
 
 // Input device configuration.
@@ -105,7 +104,7 @@ layout {
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
     center-focused-column "on-overflow"
-
+    default-column-display "tabbed"
     always-center-single-column
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
@@ -188,6 +187,16 @@ layout {
         // You can also change the shadow color and opacity.
         color "#000f"
     }
+
+    tab-indicator {
+        length total-proportion=0.5
+        hide-when-single-tab
+        place-within-column
+        width 8
+        corner-radius 5
+        active-color "#e1e2e7"
+        inactive-color "#0007"
+    }
 }
 
 // Startup Commands
@@ -251,8 +260,10 @@ window-rule {
     match app-id=r#"firefox$"#
     match app-id=r#"qutebrowser$"#
 
-    open-on-workspace "web"
-    open-maximized true
+    match app-id=r#"^com\.obsproject\.Studio$"#
+
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
     block-out-from "screen-capture"
 }
@@ -264,21 +275,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    match app-id=r#"^com\.obsproject\.Studio$"#
-
-    block-out-from "screen-capture"
-}
-
-window-rule {
     match title="^termfilechooser$"
 
     default-window-height { proportion 0.5; }
     default-column-width { proportion 0.5; }
     open-floating true
 }
+
 // kitty has bg opacity in it's config
 window-rule {
     match app-id=r#"^kitty$"#
@@ -348,10 +351,10 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
-    //Mod+J     { focus-window-down; }
-    //Mod+K     { focus-window-up; }
-    Mod+J     { focus-window-or-workspace-down; }
-    Mod+K     { focus-window-or-workspace-up; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    //Mod+J     { focus-window-or-workspace-down; }
+    //Mod+K     { focus-window-or-workspace-up; }
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }

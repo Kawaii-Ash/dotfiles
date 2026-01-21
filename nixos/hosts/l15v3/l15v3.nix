@@ -79,6 +79,11 @@
     # upower.enable = true;
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    settings.General.Experimental = true;
+  };
+
   hardware.nitrokey.enable = true;
 
   wrappers = {

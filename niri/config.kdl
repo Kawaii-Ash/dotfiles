@@ -232,6 +232,8 @@ layer-rule {
 layer-rule {
     match namespace="^notifications$"
     opacity 0.9
+
+    block-out-from "screen-capture"
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -248,6 +250,8 @@ window-rule {
     match app-id=r#"Element$"#
     match app-id=r#"org\.telegram\.desktop$"#
     match title="^iamb"
+    match app-id="equibop"
+    match app-id="vesktop"
 
     open-on-workspace "chat"
 

@@ -105,6 +105,7 @@
       aerc
       #neomutt
       #element-desktop
+      vesktop
 
       # Web Related
       yt-dlp
@@ -113,7 +114,7 @@
 
       # Dev Tools
       unstable.codex
-      gitMinimal
+      git
       jujutsu
 
       any-nix-shell
@@ -167,6 +168,32 @@
       alsa.enable = true;
       pulse.enable = true;
       audio.enable = true;
+
+      wireplumber = {
+          enable = true;
+          configPackages = [
+            (pkgs.writeTextDir "share/wireplumber/bluetooth.lua.d/51-bluez-config.lua" ''
+              monitor.bluez.properties = {
+                bluez5.enable-hw-volume = false,
+              }
+
+              monitor.bluez.rules = [
+                {
+                  matches = [ { "device.api" = "bluez5" } ]
+                  actions = { update-props = { "node.volume" = 0.0 } }
+                }
+              ]
+            '')
+            (pkgs.writeTextDir "share/wireplumber/alsa.lua.d/51-alsa-default-volume.lua" ''
+              monitor.alsa.rules = [
+                {
+                  matches = [ { "device.api" = "alsa" } ]
+                  actions = { update-props = { "node.volume" = 0.0 } }
+                }
+              ]
+            '')
+          ];
+        };
     };
 
     getty.greetingLine = ''

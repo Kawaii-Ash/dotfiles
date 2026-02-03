@@ -11,7 +11,7 @@
     enable = true;
     efiSupport = false;
     biosSupport = true;
-    biosDevice = "/dev/sda";
+    biosDevice = lib.mkDefault "/dev/sda";
     maxGenerations = 3;
     linuxResolution = "1920x1080x32";
     style = {

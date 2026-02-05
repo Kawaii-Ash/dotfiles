@@ -8,11 +8,11 @@
         "qml-niri": "qml-niri"
       },
       "locked": {
-        "lastModified": 1767561993,
-        "narHash": "sha256-DNxAzZcqlHs9OQXHi+kgi6k+ZmJK/BW8R4OmLDeJM3k=",
+        "lastModified": 1770249195,
+        "narHash": "sha256-b8zkmgTWjbiVnjm/ag1d+OVsyeKQrPbKMIiSdtYNii0=",
         "owner": "Kawaii-Ash",
         "repo": "ash-quickshell",
-        "rev": "2c719cf78dfd1b47668b7b528efb36064f400dfe",
+        "rev": "bfc626900024ba509b6650344b63c6a4f2e331f6",
         "type": "github"
       },
       "original": {

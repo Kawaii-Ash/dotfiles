@@ -75,12 +75,15 @@
     # Enable periodic SSD TRIM
     fstrim.enable = true;
 
+    power-profiles-daemon.enable = true;
     pcscd.enable = true;
-    # upower.enable = true;
+    thermald.enable = true;
+    upower.enable = true;
   };
 
   hardware.bluetooth = {
     enable = true;
+    powerOnBoot = false;
     settings.General.Experimental = true;
   };
 
@@ -94,10 +97,10 @@
     };
   };
 
-  # powerManagement.powertop.enable = true;
+  powerManagement.powertop.enable = true;
 
   environment.systemPackages = with pkgs; [
-    #acpi
+    acpi
     monero-gui
     keepassxc
     #nitrokey-app
